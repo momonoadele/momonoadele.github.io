@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+<title>Alice in Mafiaworld</title>
+<meta name="description" content="Adèle的原创OC世界">
+<link rel="icon" href="icon.png">
+<style>
+*{
+    margin: 0;;
+    padding: 0;;
+    box-sizing:border-box;
+}
+/* 主体 */
+.container{
+    width:100%;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap: 20px;
+}
+/* 图片 */
+.main-image{
+    width: min(600px, 85vw);
+    height: auto;
+    padding: 0;
+    margin-top: 40px;
+}
+
+/* 按钮 */
+.enter-button{
+    text-decoration:none;
+    color:black;
+    background:#dcdcdc;
+    border:2px solid black;
+    padding:14px 50px;
+    font-size:20px;
+    transition:0.2s;
+    box-shadow:4px 4px 0px black;
+        margin-top:auto;
+    margin-bottom:0px;
+}
+.enter-button:hover{
+    transform:translate(3px,3px);
+    background:#8b0000;
+    box-shadow:3px 3px 0px black;
+}
+</style>
+</head>
+
+<body>
+    <div class="container">
+        <img
+        class="main-image"
+        src="https://ik.imagekit.io/momonoadele/site/00.png"
+        alt="Alice"
+        width="700">
+    <div class="typing">
+        <span id="text"></span>
+    </div>
+    <a class="enter-button" href="world.html">
+        ENTER
+    </a>
+    <div id="footer"></div>
+    </div>
+    <script>
+    const lines = [
+    `Alice! a childish story take,`,
+    `And with a gentle hand`,
+    `Lay it where Childhood’s dreams are twined`,
+    `In Memory’s mystic band,`,
+    `Like pilgrim’s wither’d wreath of flowers`,
+    `Pluck’d in a far-off land.`
+    ]
+    const textElement = document.getElementById("text")
+    let lineIndex = 0
+    let charIndex = 0
+    function type(){
+    if(charIndex < lines[lineIndex].length){
+        textElement.textContent += lines[lineIndex][charIndex]
+        charIndex++
+        setTimeout(type,80)
+    }else{
+        setTimeout(erase,1800)
+    }
+}
+function erase(){
+    if(charIndex > 0){
+        textElement.textContent =
+        lines[lineIndex].substring(0,charIndex-1)
+        charIndex--
+        setTimeout(erase,40)
+    }else{
+        lineIndex = (lineIndex + 1) % lines.length
+        setTimeout(type,400)
+    }
+}
+type()
+</script>
+
+ <script src="js/load.js"></script>
+</body>
+</html>
