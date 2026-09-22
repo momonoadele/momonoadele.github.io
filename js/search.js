@@ -53,10 +53,11 @@ const searchData = {
 
     results: [
       {
-        number: "NR-1945-01",
-        title: "为和平微笑，为秩序发声",
-        link: "/archives/1945-foundation.html"
+        number: "PUB-1945-001",
+        title: "为重建地方生活 格莱修先生宣布设立长期救济基金",
+        link: "/archives/pub-1945-001.html"
       }
+
     ]
   },
 
