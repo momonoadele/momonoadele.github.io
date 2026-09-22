@@ -4,20 +4,20 @@ const ARCHIVE_STORAGE_KEY = "glacieuxArchiveDiscovered";
 const archiveFiles = [
 
   {
-    id: "PUB-1945-01",
+    id: "PUB-1945-001",
     year: 1945,
     title: "为重建地方生活 格莱修先生宣布设立长期救济基金",
     type: "新闻",
-    url: "../archives/pub-1945-01.html",
+    url: "../archives/pub-1945-001.html",
     defaultUnlocked: true
   },
 
   {
-    id: "PUB-1950-01",
+    id: "PUB-1950-001",
     year: 1950,
     title: "格莱修基金会启用“冰川基金会”新名　宣布长期支持南极科学事业",
     type: "新闻",
-    url: "../archives/pub-1950-01.html",
+    url: "../archives/pub-1950-001.html",
     defaultUnlocked: true
   },
 

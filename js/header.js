@@ -55,6 +55,8 @@ function initArchiveSearch() {
     "pr-a-002": "/characters/marguerite.html",
     "pr-a-003": "/characters/aline.html",
     "pr-a-004": "/characters/bastien.html",
+    "pub-1945-001": "/archives/pub-1945-001.html",
+    "pub-1950-001": "/archives/pub-1950-001.html",
   };
 
   document.querySelectorAll(".archive-search").forEach(input => {
