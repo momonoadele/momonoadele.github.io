@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="description"  content=""
+  >
+  <title>Alice in Underworld</title>
+  <link rel="icon" href="https://ik.imagekit.io/momonoadele/icon.png?updatedAt=1789964619605" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <main class="entrance">
+    <img
+      id="entrance-image"
+      class="entrance-image"
+      src="https://ik.imagekit.io/momonoadele/20260527.png?updatedAt=1779883480119"
+      alt=""
+    >
+    <div class="login-box">
+      <label for="username">USERNAME</label>
+      <input
+        id="username"
+        type="text"
+        value="AdeleShirase"
+        readonly
+      >
+      <label for="password">PASSWORD</label>
+      <input
+        id="password"
+        type="password"
+        value="GLACIEUX"
+        readonly
+      >
+      <button id="login-button" type="button">
+        DOWN THE RABBIT HOLE
+      </button>
+      <p id="login-status"></p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    Copyright © Adèle. This work is licensed under CC BY-NC-ND 4.0.
+  </footer>
+
+  <script>
+    const loginButton = document.getElementById("login-button");
+    const loginStatus = document.getElementById("login-status");
+    const loginImage = document.getElementById("entrance-image");
+    function typeText(element, text, speed, callback) {
+      element.textContent = "";
+      let index = 0;
+      const timer = setInterval(() => {
+        element.textContent += text[index];
+        index++;
+        if (index >= text.length) {
+          clearInterval(timer);
+          if (callback) {
+            callback();
+          }
+        }
+      }, speed);
+    }
+    loginButton.addEventListener("click", () => {
+      loginButton.disabled = true;
+      typeText(
+        loginStatus,
+        "正在验证中……",
+        50,
+        () => {
+                loginImage.src =
+                  "https://ik.imagekit.io/momonoadele/20260527-2.png?updatedAt=1789963011073";
+          setTimeout(() => {
+            typeText(
+              loginStatus,
+              "验证成功。欢迎回来，AdeleShirase。",
+              50,
+              () => {
+                setTimeout(() => {
+                  window.location.href = "archive.html";
+                }, 1500);
+              }
+            );
+          }, 800);
+          loginButton.disabled = false;
+        }
+      );
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+
+  <title>Search | GLACIEUX</title>
+
+  <link
+    rel="icon"
+    href="https://ik.imagekit.io/momonoadele/icon.png?updatedAt=1789964619605"
+    type="image/png"
+  >
+
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+  <main class="page">
+
+    <header class="header">
+      <div class="site-header-content"></div>
+      <a href="javascript:history.back()" id="back-button">
+      BACK
+      </a>
+    </header>
+
+    <section class="archive-window">
+      <div class="search-heading">
+        <p>
+          SEARCH QUERY:
+          <span id="search-query"></span>
+        </p>
+        <p id="search-count"></p>
+      </div>
+      <hr>
+      <div id="search-message"></div>
+      <div id="search-results"></div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Copyright © Adèle. This work is licensed under CC BY-NC-ND 4.0.</p>
+  </footer>
+
+  <script src="/js/header.js"></script>
+  <script src="/js/search.js"></script>
+  <script>
+  document.getElementById("back-button").addEventListener("click", function () {
+    if (history.length > 1) {
+      history.back();
+    } else {
+      window.location.href = "/";
+    }
+  });
+</script>
+</body>
+
+</html>
